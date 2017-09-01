@@ -1,10 +1,10 @@
 <% @todo_lists.each do |todo_list| %>
-  <div>
-    <h2><%= link_to todo_list.title, todo_list %></h2>
-    <p><%= todo_list.description %></p>
+  <div class="index-row clearfix">
+    <h2 class="todo-list-title"><%= link_to todo_list.title, todo_list %></h2>
+    <p class="todo-list-sub-title"><%= todo_list.description %></p>
   </div>
 <% end %>
 
-<div>
+<div class="links">
   <%= link_to "New Todo List", new_todo_list_path %>
 </div>

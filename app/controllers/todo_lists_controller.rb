@@ -19,7 +19,7 @@ class TodoListsController < ApplicationController
     @todo_list = TodoList.new(todo_list_params)
 
     if @todo_list.save
-      redirect_to todo_lists_path, notice: 'Todo list successfully created'
+      redirect_to @todo_list, notice: 'Todo list successfully created'
     else
       render :new
     end
